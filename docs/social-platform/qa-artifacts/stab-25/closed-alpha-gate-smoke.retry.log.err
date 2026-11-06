@@ -1,0 +1,5 @@
+Error: POST /auth/register -> 429 "Too many requests"
+    at req (file:///C:/xampp/htdocs/%D8%AA%D9%88%D8%A7%D8%B5%D9%84/scripts/closed-alpha-gate-smoke.mjs:38:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async register (file:///C:/xampp/htdocs/%D8%AA%D9%88%D8%A7%D8%B5%D9%84/scripts/closed-alpha-gate-smoke.mjs:49:16)
+    at async main (file:///C:/xampp/htdocs/%D8%AA%D9%88%D8%A7%D8%B5%D9%84/scripts/closed-alpha-gate-smoke.mjs:144:13)

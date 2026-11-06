@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: messaging-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: messaging-backend
+  template:
+    metadata:
+      labels:
+        app: messaging-backend
+    spec:
+      containers:
+        - name: backend
+          image: secure-messaging/backend:latest
+          ports:
+            - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: messaging-backend
+spec:
+  selector:
+    app: messaging-backend
+  ports:
+    - port: 3000
+      targetPort: 3000

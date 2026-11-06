@@ -1,0 +1,22 @@
+﻿[
+    {
+        "script":  "rc-feature-smoke.mjs",
+        "exit":  null
+    },
+    {
+        "script":  "product-readiness-smoke.mjs",
+        "exit":  null
+    },
+    {
+        "script":  "closed-alpha-gate-smoke.mjs",
+        "exit":  null
+    },
+    {
+        "script":  "integration-smoke.mjs",
+        "exit":  null
+    },
+    {
+        "script":  "critical-launch-fixes-regression.mjs",
+        "exit":  null
+    }
+]

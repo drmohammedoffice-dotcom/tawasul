@@ -1,0 +1,40 @@
+{
+  "at": "2026-10-24T23:04:47.484Z",
+  "results": [
+    {
+      "name": "rc.search-privacy",
+      "status": "PASS",
+      "detail": "users=12 privPosts=0 blockedUsers=11"
+    },
+    {
+      "name": "rc.bookmarks-list",
+      "status": "PASS",
+      "detail": "b=1 a=0 afterUnsave=0"
+    },
+    {
+      "name": "rc.reels-feed-endpoint",
+      "status": "PASS",
+      "detail": "status=200 count=1 seeded=cmvn0aop300xgva8gcrol29jj"
+    },
+    {
+      "name": "rc.reels-like-unlike",
+      "status": "PASS",
+      "detail": "reel=cmvn0aop300xgva8gcrol29jj playable=true bytesSeed=31892"
+    },
+    {
+      "name": "rc.groups-ws-fanout",
+      "status": "PASS",
+      "detail": "id=cmvn0aow900xzva8g2y4ubq5j"
+    },
+    {
+      "name": "rc.channel-ws-member-denied",
+      "status": "PASS",
+      "detail": "{\"denied\":true,\"via\":\"timeout-or-error\"}"
+    },
+    {
+      "name": "rc.health-postgres-redis",
+      "status": "PASS",
+      "detail": "postgres=up redis=up media=local"
+    }
+  ]
+}

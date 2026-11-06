@@ -1,0 +1,81 @@
+name: Security gates
+
+on:
+  push:
+    branches: [main, master, develop]
+  pull_request:
+
+jobs:
+  dependency-audit:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - name: Install workspace
+        working-directory: .
+        run: npm ci --ignore-scripts
+      - name: npm audit (production, high+)
+        working-directory: .
+        run: npm audit --omit=dev --audit-level=high
+        continue-on-error: false
+
+  secret-scan-lite:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Block committed env / key material
+        run: |
+          set -euo pipefail
+          if git ls-files | grep -E '(^|/)\.env($|\.)' | grep -vE '\.env\.example$|\.env\.docker\.example$'; then
+            echo "Committed .env file detected"
+            exit 1
+          fi
+          if git grep -nE 'BEGIN (RSA |OPENSSH )?PRIVATE KEY' -- ':!*.md' ':!docs/**' || true; then
+            hits=$(git grep -nE 'BEGIN (RSA |OPENSSH )?PRIVATE KEY' -- ':!*.md' ':!docs/**' || true)
+            if [ -n "$hits" ]; then
+              echo "$hits"
+              echo "Private key material found in repo"
+              exit 1
+            fi
+          fi
+
+  auth-unit-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install backend deps (argon2/jsonwebtoken)
+        working-directory: .
+        run: npm ci --ignore-scripts
+      - name: Rebuild argon2
+        run: npm rebuild argon2
+      - name: TOTP / seal unit checks
+        run: node scripts/security-totp-unit.mjs
+      - name: Magic-byte unit checks
+        run: node scripts/security-magic-unit.mjs
+      - name: Argon2 dual-verify migration unit
+        run: node scripts/security-argon2-migrate-test.mjs
+      - name: JWT iss/aud/kid unit
+        run: node scripts/security-jwt-claims-test.mjs
+
+  trivy-fs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          scan-type: fs
+          severity: CRITICAL,HIGH
+          exit-code: '1'
+          ignore-unfixed: true
+          format: table

@@ -1,0 +1,30 @@
+{
+  "at": "2026-10-24T22:08:45.009Z",
+  "results": [
+    {
+      "name": "p0.private-post-stranger-denied",
+      "status": "PASS",
+      "detail": "like=403 comment=403 media=403"
+    },
+    {
+      "name": "p0.private-post-owner-allowed",
+      "status": "PASS",
+      "detail": "status=201"
+    },
+    {
+      "name": "p0.dm-block-enforced",
+      "status": "PASS",
+      "detail": "send=403/403 list=403"
+    },
+    {
+      "name": "p1.logout-revokes-current-only",
+      "status": "PASS",
+      "detail": "logout=201 reuse=401 other=201"
+    },
+    {
+      "name": "p1.feed-explore-secure-media",
+      "status": "PASS",
+      "detail": "feedUrl=true exploreUrl=true fetchOk=true"
+    }
+  ]
+}

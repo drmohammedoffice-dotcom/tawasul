@@ -1,0 +1,1 @@
+﻿{"ok": true, "provider": "easyocr", "modelId": "easyocr-ar-en", "data": {"lines": [{"text": "BAGHDAD ELEC THIG CAR", "confidence": 0.2082466687295388}], "text": "BAGHDAD ELEC THIG CAR", "note": "PaddleOCR disabled on Windows oneDNN; EasyOCR via PIL/numpy path-safe load."}}

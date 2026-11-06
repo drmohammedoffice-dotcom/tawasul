@@ -1,0 +1,28 @@
+{
+  "name": "@secure-messaging/ai-service",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tawasul AI — local-first offline inference service",
+  "main": "dist/main.js",
+  "scripts": {
+    "dev": "ts-node --transpile-only src/main.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/main.js",
+    "test": "ts-node --transpile-only src/tests/run-all.ts",
+    "health": "node -e \"fetch('http://127.0.0.1:'+(process.env.AI_PORT||3100)+'/health').then(r=>r.json()).then(console.log).catch(e=>{console.error(e);process.exit(1)})\"",
+    "fixtures:validation": ".venv/Scripts/python.exe scripts/validation-fixtures.py",
+    "test:ocr-bidi": ".venv/Scripts/python.exe python/test_ocr_bidi.py",
+    "validate:integration": "node --env-file=.env scripts/run-integration-validation.mjs",
+    "validate:phase36": "node --env-file=.env scripts/run-phase36-validation.mjs"
+  },
+  "dependencies": {
+    "bullmq": "^5.34.5",
+    "dotenv": "^16.5.0",
+    "ioredis": "^5.6.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}

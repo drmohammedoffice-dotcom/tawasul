@@ -1,0 +1,131 @@
+{
+  "at": "2026-10-24T22:10:45.385Z",
+  "results": [
+    {
+      "name": "setup.users",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "groups.create",
+      "ok": true,
+      "detail": "cmvmycy8100o7va8gd7y68hbu"
+    },
+    {
+      "name": "groups.add-member",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "groups.send+list-messages",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "groups.unauthorized-remove-denied",
+      "ok": true,
+      "detail": "status=403"
+    },
+    {
+      "name": "groups.remove-member",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "channels.create",
+      "ok": true,
+      "detail": "cmvmycyc700okva8gypyz2yqc"
+    },
+    {
+      "name": "channels.subscribe",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "channels.owner-post+list",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "channels.member-post-policy",
+      "ok": true,
+      "detail": "status=403 note=\"only channel owner/admin can post\""
+    },
+    {
+      "name": "channels.unsubscribe",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "reels.reject-bad-video-mime",
+      "ok": true,
+      "detail": "status=400"
+    },
+    {
+      "name": "reels.video-upload+complete",
+      "ok": true,
+      "detail": "processingStatus=ready"
+    },
+    {
+      "name": "reels.create+feed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "reels.like+view",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "stream.setup-status",
+      "ok": true,
+      "detail": "enabled=true reason=ok"
+    },
+    {
+      "name": "stream.direct-upload-unavailable-or-configured",
+      "ok": true,
+      "detail": "status=201 mediaId=61d853a9e4f64af5985426c8"
+    },
+    {
+      "name": "stream.live-upload-cycle",
+      "ok": null,
+      "status": "NOT RUN",
+      "detail": "direct-upload ticket created; binary upload+webhook not automated in this harness"
+    },
+    {
+      "name": "video.processing-retry-or-ready",
+      "ok": true,
+      "detail": "status=ready reason=marked_ready_without_stream"
+    },
+    {
+      "name": "websocket.group-join-acl",
+      "ok": true,
+      "detail": "outsiderDenied=true"
+    },
+    {
+      "name": "websocket.group-message-fanout",
+      "ok": true,
+      "detail": "fanoutId=cmvmyd79w00pkva8g0x3od4jj"
+    },
+    {
+      "name": "websocket.group-message-dedupe",
+      "ok": true,
+      "detail": "duplicate=true"
+    },
+    {
+      "name": "websocket.channel-message-fanout",
+      "ok": true,
+      "detail": "fanoutId=cmvmyd8t500q7va8g1juyijg2"
+    },
+    {
+      "name": "websocket.invalid-jwt-denied",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "websocket.private-message-send",
+      "ok": true,
+      "detail": "ack={\"success\":true,\"message\":\"message processed\",\"data\":{\"id\":\"cmvmydaek00q9va8gsvulz0r9\",\"senderId\":\"cmvmycxx600nyva8gqyoz"
+    }
+  ]
+}

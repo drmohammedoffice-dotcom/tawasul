@@ -1,0 +1,79 @@
+{
+  "passed": 8,
+  "failed": 0,
+  "notRun": 4,
+  "results": [
+    {
+      "name": "alpha.setup-user",
+      "ok": true,
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "alpha.create-post-multi-image",
+      "ok": true,
+      "status": "PASS",
+      "detail": "postId=cmvn0aj5u00vlva8g01affzhl mediaCount=2"
+    },
+    {
+      "name": "alpha.reject-bad-mime",
+      "ok": true,
+      "status": "PASS",
+      "detail": "status=400"
+    },
+    {
+      "name": "alpha.reel-create-feed-playable",
+      "ok": true,
+      "status": "PASS",
+      "detail": "reel=cmvn0ajdm00vwva8gjwkuxyqz playable=true bytes=42548 url=true"
+    },
+    {
+      "name": "alpha.reel-like-unlike",
+      "ok": true,
+      "status": "PASS",
+      "detail": "reel=cmvn0ajdm00vwva8gjwkuxyqz"
+    },
+    {
+      "name": "alpha.ffmpeg-trim-gate",
+      "ok": true,
+      "status": "PASS",
+      "detail": "available=true over=400 clip=12"
+    },
+    {
+      "name": "alpha.otp-provider-status",
+      "ok": true,
+      "status": "PASS",
+      "detail": "mode=mock sms=false wa=false"
+    },
+    {
+      "name": "alpha.calls-ice-config",
+      "ok": true,
+      "status": "PASS",
+      "detail": "turnConfigured=false note=STUN-only mesh. Configure WEBRTC_TURN_* for reliable NAT traversal; SFU needed f"
+    },
+    {
+      "name": "alpha.live-otp-send",
+      "ok": null,
+      "status": "NOT RUN",
+      "detail": "BLOCKED — Twilio credentials not configured (OTP_MESSAGING_DRIVER=mock)"
+    },
+    {
+      "name": "alpha.live-webrtc-dual-device",
+      "ok": null,
+      "status": "NOT RUN",
+      "detail": "NOT RUN — requires two browsers/devices + TURN for cross-network; STUN-only lab"
+    },
+    {
+      "name": "alpha.stream-live-upload-cycle",
+      "ok": null,
+      "status": "NOT RUN",
+      "detail": "NOT RUN — Cloudflare Stream binary upload + webhook not automated"
+    },
+    {
+      "name": "alpha.reel-comments-schema",
+      "ok": null,
+      "status": "NOT RUN",
+      "detail": "NOT RUN / deferred — no ReelComment model; like/view only for closed alpha"
+    }
+  ]
+}

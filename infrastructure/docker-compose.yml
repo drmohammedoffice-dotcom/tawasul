@@ -1,0 +1,44 @@
+version: '3.9'
+
+services:
+  backend:
+    build:
+      context: ../
+      dockerfile: infrastructure/docker/backend.Dockerfile
+    env_file:
+      - ../backend/.env.example
+    ports:
+      - '3000:3000'
+    depends_on:
+      - postgres
+      - redis
+
+  frontend:
+    build:
+      context: ../
+      dockerfile: infrastructure/docker/frontend.Dockerfile
+    env_file:
+      - ../frontend/.env.example
+    ports:
+      - '5173:5173'
+    depends_on:
+      - backend
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: app
+      POSTGRES_DB: secure_messaging
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - '6379:6379'
+
+volumes:
+  postgres_data:

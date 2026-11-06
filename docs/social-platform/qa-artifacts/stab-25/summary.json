@@ -1,0 +1,57 @@
+﻿[
+    {
+        "script":  "final-qa-security-regression.mjs",
+        "exit":  0,
+        "tail":  "PASS - register trio | PASS - media.force-private-for-post-purpose | strangerStatus=403 | PASS - media.idor-unlinked-forbidden | status=403 | PASS - media+feed.block-hides-content | urlAfterBlock=403 inFeed=false | PASS - auth.2fa-email-requires-phone-proof | status=400 | PASS - media.verification-idor-forbidden | status=403 |  | Summary: PASS=7 FAIL=0"
+    },
+    {
+        "script":  "phase1-accounts-smoke.mjs",
+        "exit":  0,
+        "tail":  "PASS  verification status + admin gated | PASS  close friends endpoints | PASS  highlights create/list | PASS  phone OTP login | PASS  otp resend rate limit |  | --- Phase 1 smoke summary --- | passed=10 failed=0"
+    },
+    {
+        "script":  "phase2-messaging-smoke.mjs",
+        "exit":  0,
+        "tail":  "PASS  search username+displayName | PASS  dm send+list | PASS  block prevents dm | PASS  calls ice-servers | PASS  dm call invite+reject |  | --- Phase 2 smoke summary --- | passed=12 failed=0"
+    },
+    {
+        "script":  "phase3-publishing-smoke.mjs",
+        "exit":  0,
+        "tail":  "PASS - download.authorized-url | media=7b3583345d1e4955b09ff397 | PASS - stories.close-friends-acl | view=403 share=403 | NOT RUN - ui.crop-carousel-progress | requires browser | NOT RUN - ui.video-trim-editor | client MediaRecorder trim; no FFmpeg server | NOT RUN - ui.story-viewer-gestures | requires browser | NOT RUN - ui.rtl-ltr-responsive | requires browser |  | Summary: PASS=13 FAIL=0 NOT_RUN=4"
+    },
+    {
+        "script":  "post-qa-remediation-smoke.mjs",
+        "exit":  0,
+        "tail":  "PASS - search.hashtags | tags=1 tagged=3 | PASS - archive.restore | listed=true restored=true | PASS - video.trim-status | available=true | PASS - video.trim-reject-over-60 | status=400 | PASS - explore.ranked-list | count=3 | PASS - calls.ice-config | turnHint=STUN-only mesh. Configure WEBRTC_TURN_* for reliable NAT traversal; SFU needed f |  | Summary: PASS=14 FAIL=0 NOT_RUN=0"
+    },
+    {
+        "script":  "ux-completion-smoke.mjs",
+        "exit":  0,
+        "tail":  "PASS - ux.followers-following-privacy | followers=1 following=1 privateList=403 | PASS - ux.stories-secure-and-gate | secureUrl=true strangerView=403 | PASS - ux.groups-list-members-acl | listed=1 stranger=403 members=2 | PASS - ux.channels-list-post-acl | listed=1 memberPost=403 | PASS - ux.private-comment-denied | status=403 |  | UX COMPLETION SUMMARY passed=6 failed=0 total=6 | wrote C:\\xampp\\htdocs\\╪ز┘ê╪د╪╡┘\\docs\\social-platform\\_ux-completion-results.json"
+    },
+    {
+        "script":  "rc-feature-smoke.mjs",
+        "exit":  1,
+        "tail":  "FAIL - rc.reels-feed-endpoint | status=429 count=0 | NOT RUN - rc.reels-like-unlike | NOT RUN ظ¤ no reels in feed (create requires ready video asset) | FAIL - rc.groups-ws-fanout | GET /business/categories -\u003e 429 \"Too many requests\" | FAIL - rc.channel-ws-member-denied | POST /channels -\u003e 429 \"Too many requests\" | PASS - rc.health-postgres-redis | postgres=up redis=up media=local |  | RC FEATURE SUMMARY passed=2 failed=4 notRun=1 total=7 | wrote C:\\xampp\\htdocs\\╪ز┘ê╪د╪╡┘\\docs\\social-platform\\_rc-feature-results.json"
+    },
+    {
+        "script":  "product-readiness-smoke.mjs",
+        "exit":  -1073740791,
+        "tail":  "PRODUCT READINESS SUMMARY passed=0 failed=1 notRun=0 total=1 | node : Assertion failed: !(handle-\u003eflags \u0026 UV_HANDLE_CLOSING), file src\\win\\async.c, line 94 | At C:\\Users\\fighter\\AppData\\Local\\Temp\\ps-script-2529e560-26b4-49b3-a9e6-35b1e4b75e7a.ps1:98 char:3 | +   node \"scripts\\$s\" *\u003e $log | +   ~~~~~~~~~~~~~~~~~~~~~~~~~ |     + CategoryInfo          : NotSpecified: (Assertion faile...sync.c, line 94:String) [], RemoteException |     + FullyQualifiedErrorId : NativeCommandError |  "
+    },
+    {
+        "script":  "closed-alpha-gate-smoke.mjs",
+        "exit":  1,
+        "tail":  "    + CategoryInfo          : NotSpecified: (Error: POST /au... many requests\":String) [], RemoteException |     + FullyQualifiedErrorId : NativeCommandError |   |     at req (file:///C:/xampp/htdocs/%D8%AA%D9%88%D8%A7%D8%B5%D9%84/scripts/closed-alpha-gate-smoke.mjs:38:11) |     at process.processTicksAndRejections (node:internal/process/task_queues:104:5) |     at async register  | (file:///C:/xampp/htdocs/%D8%AA%D9%88%D8%A7%D8%B5%D9%84/scripts/closed-alpha-gate-smoke.mjs:49:16) |     at async main (file:///C:/xampp/htdocs/%D8%AA%D9%88%D8%A7%D8%B5%D9%84/scripts/closed-alpha-gate-smoke.mjs:144:13)"
+    },
+    {
+        "script":  "integration-smoke.mjs",
+        "exit":  1,
+        "tail":  "FAIL - like+comment+bookmark | no postId | FAIL - stories.create+feed | no mediaId | FAIL - notifications.list | GET /notifications -\u003e 429 \"Too many requests\" | FAIL - block+report | POST /users//block -\u003e 429 \"Too many requests\" | FAIL - media.idor-delete-denied | no mediaId | FAIL - messages.private-send | POST /messages -\u003e 429 \"Too many requests\" |  | SUMMARY passed=2 failed=14 total=16"
+    },
+    {
+        "script":  "critical-launch-fixes-regression.mjs",
+        "exit":  -1073740791,
+        "tail":  "  |     at req (file:///C:/xampp/htdocs/%D8%AA%D9%88%D8%A7%D8%B5%D9%84/scripts/critical-launch-fixes-regression.mjs:40:11) |     at process.processTicksAndRejections (node:internal/process/task_queues:104:5) |     at async register  | (file:///C:/xampp/htdocs/%D8%AA%D9%88%D8%A7%D8%B5%D9%84/scripts/critical-launch-fixes-regression.mjs:51:16) |     at async main  | (file:///C:/xampp/htdocs/%D8%AA%D9%88%D8%A7%D8%B5%D9%84/scripts/critical-launch-fixes-regression.mjs:96:17) | Assertion failed: !(handle-\u003eflags \u0026 UV_HANDLE_CLOSING), file src\\win\\async.c, line 94"
+    }
+]

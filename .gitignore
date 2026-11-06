@@ -1,0 +1,51 @@
+# dependencies
+node_modules/
+
+# builds
+dist/
+coverage/
+.turbo/
+
+# env / secrets (never commit)
+.env
+.env.*
+!.env.example
+!.env.docker.example
+!.env.*.example
+.env.local
+backend/.env
+backend/.env.docker
+frontend/.env
+ai-service/.env
+
+# Firebase Admin service account (never commit)
+**/firebase-service-account.json
+**/*firebase-adminsdk*.json
+
+# editors
+.idea/
+.vscode/
+
+# DB dumps (closed-alpha backups)
+backups/
+docs/security/scans/backups/*.dump
+docs/security/scans/trivy-fs.json
+
+# logs
+*.log
+
+# local AI model weights and training artifacts (never commit binaries)
+ai-service/models/**
+!ai-service/models/.gitkeep
+ai-service/training-data/
+ai-service/validation-results/
+ai-service/.env
+ai-service/.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# keep old generated frontend artifacts out of VCS if present
+frontend/web/node_modules/
+frontend/web/dist/

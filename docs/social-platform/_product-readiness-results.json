@@ -1,0 +1,125 @@
+{
+  "at": "2026-10-24T22:07:57.911Z",
+  "results": [
+    {
+      "name": "auth.register-two-users",
+      "status": "PASS",
+      "detail": "alice_1792879669121_613/bob_1792879669846_882",
+      "layer": "api"
+    },
+    {
+      "name": "auth.login",
+      "status": "PASS",
+      "detail": "",
+      "layer": "api"
+    },
+    {
+      "name": "auth.logout-endpoint",
+      "status": "PASS",
+      "detail": "logout=201 revokedReuse=401 otherDeviceRefresh=201",
+      "layer": "api"
+    },
+    {
+      "name": "profile.update-text",
+      "status": "PASS",
+      "detail": "",
+      "layer": "api"
+    },
+    {
+      "name": "profile.avatar-pipeline",
+      "status": "PASS",
+      "detail": "avatarUrl=set mediaId=cb72fb8976da4e9fb3aa566e (string URL only; no first-class media bind)",
+      "layer": "api"
+    },
+    {
+      "name": "social.follow-unfollow",
+      "status": "PASS",
+      "detail": "",
+      "layer": "api"
+    },
+    {
+      "name": "posts.create-feed-explore",
+      "status": "PASS",
+      "detail": "feed=true stubHidden=true explore=true feedSecure=true exploreSecure=true",
+      "layer": "api"
+    },
+    {
+      "name": "posts.like-comment-bookmark",
+      "status": "PASS",
+      "detail": "",
+      "layer": "api"
+    },
+    {
+      "name": "posts.delete-authz",
+      "status": "PASS",
+      "detail": "nonOwner=403 ownerDeleted=ok",
+      "layer": "api"
+    },
+    {
+      "name": "media.persist-after-relogin",
+      "status": "PASS",
+      "detail": "postId=cmvmy9n2r00duva8gtysz0sth",
+      "layer": "api"
+    },
+    {
+      "name": "stories.create-and-feed",
+      "status": "PASS",
+      "detail": "noFollow=false afterFollow=true self=true expiresAt=2026-10-25T22:07:55.974Z",
+      "layer": "api"
+    },
+    {
+      "name": "stories.expiry-enforced-live",
+      "status": "PASS",
+      "detail": "feedGone=true selfGone=true viewStatus=404",
+      "layer": "api"
+    },
+    {
+      "name": "dm.realtime-send-receive",
+      "status": "PASS",
+      "detail": "fanout=true",
+      "layer": "api"
+    },
+    {
+      "name": "groups.create-member-message",
+      "status": "PASS",
+      "detail": "",
+      "layer": "api"
+    },
+    {
+      "name": "channels.owner-post-member-denied",
+      "status": "PASS",
+      "detail": "memberStatus=403",
+      "layer": "api"
+    },
+    {
+      "name": "notifications.list",
+      "status": "PASS",
+      "detail": "count=3",
+      "layer": "api"
+    },
+    {
+      "name": "moderation.block-report",
+      "status": "PASS",
+      "detail": "dmFromBlocker=403 dmFromBlocked=403",
+      "layer": "api"
+    },
+    {
+      "name": "security.private-post-like-authz",
+      "status": "PASS",
+      "detail": "status=403 (403/404 expected; 2xx means privacy gap)",
+      "layer": "api"
+    },
+    {
+      "name": "stream.setup-status",
+      "status": "PASS",
+      "detail": "enabled=true webhookConfigured=true",
+      "layer": "api"
+    },
+    {
+      "name": "frontend.dev-server",
+      "status": "PASS",
+      "detail": "status=200",
+      "layer": "api"
+    }
+  ]
+}

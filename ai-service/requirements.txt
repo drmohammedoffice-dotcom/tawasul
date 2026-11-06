@@ -1,0 +1,11 @@
+# Local-First AI workers (Windows Dev laptop). No cloud AI APIs.
+faster-whisper==1.2.1
+av==12.3.0
+sentence-transformers>=3.0.0
+easyocr==1.7.2
+Pillow>=10.0.0
+numpy>=1.26.0
+torch
+# PaddleOCR remains optional; broken with oneDNN on this Windows build.
+# paddlepaddle
+# paddleocr

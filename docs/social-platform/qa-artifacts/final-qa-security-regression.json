@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-10-24T23:19:36.020Z",
+  "results": [
+    {
+      "name": "api reachable",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "register trio",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "media.force-private-for-post-purpose",
+      "status": "PASS",
+      "detail": "strangerStatus=403"
+    },
+    {
+      "name": "media.idor-unlinked-forbidden",
+      "status": "PASS",
+      "detail": "status=403"
+    },
+    {
+      "name": "media+feed.block-hides-content",
+      "status": "PASS",
+      "detail": "urlAfterBlock=403 inFeed=false"
+    },
+    {
+      "name": "auth.2fa-email-requires-phone-proof",
+      "status": "PASS",
+      "detail": "status=400"
+    },
+    {
+      "name": "media.verification-idor-forbidden",
+      "status": "PASS",
+      "detail": "status=403"
+    }
+  ],
+  "summary": {
+    "passed": 7,
+    "failed": 0
+  }
+}

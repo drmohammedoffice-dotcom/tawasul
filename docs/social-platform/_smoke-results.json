@@ -1,0 +1,85 @@
+{
+  "at": "2026-10-24T22:08:26.625Z",
+  "results": [
+    {
+      "name": "health",
+      "ok": true,
+      "detail": "{\"postgres\":\"up\",\"redis\":\"up\",\"media\":{\"driver\":\"local\",\"r2Configured\":null}}"
+    },
+    {
+      "name": "auth.register A",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "auth.register B",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "auth.login A",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "profile.get+update",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "follow/unfollow",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "media.ticket+upload+complete",
+      "ok": true,
+      "detail": "mediaId=d76c2b39c550401995072eaa"
+    },
+    {
+      "name": "media.reject-bad-mime",
+      "ok": true,
+      "detail": "status=400"
+    },
+    {
+      "name": "posts.create",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "feed+explore",
+      "ok": true,
+      "detail": "feed=1, explore=3"
+    },
+    {
+      "name": "like+comment+bookmark",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "stories.create+feed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "notifications.list",
+      "ok": true,
+      "detail": "count=2"
+    },
+    {
+      "name": "block+report",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "media.idor-delete-denied",
+      "ok": true,
+      "detail": "status=403"
+    },
+    {
+      "name": "messages.private-send",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "at": "2026-10-24T23:19:29.792Z",
+  "results": [
+    {
+      "name": "gate.health",
+      "status": "PASS",
+      "detail": "pg=up redis=up"
+    },
+    {
+      "name": "gate.cors-allowlist",
+      "status": "PASS",
+      "detail": "local=http://localhost:5173 loopback=http://127.0.0.1:5173 evil=null"
+    },
+    {
+      "name": "gate.logout-refresh-revoke",
+      "status": "PASS",
+      "detail": "reuse=401"
+    },
+    {
+      "name": "gate.privacy-post-search-media",
+      "status": "PASS",
+      "detail": "like=403 media=403 searchHits=0"
+    },
+    {
+      "name": "gate.block-dm",
+      "status": "PASS",
+      "detail": "status=403"
+    },
+    {
+      "name": "gate.group-idor",
+      "status": "PASS",
+      "detail": "msgs=403 members=403"
+    },
+    {
+      "name": "gate.bookmarks-isolation",
+      "status": "PASS",
+      "detail": "b=1 a=0"
+    },
+    {
+      "name": "gate.media-bad-mime",
+      "status": "PASS",
+      "detail": "status=400"
+    },
+    {
+      "name": "gate.ws-origin",
+      "status": "PASS",
+      "detail": "allowed=true evil=error"
+    },
+    {
+      "name": "gate.frontend-localhost",
+      "status": "PASS",
+      "detail": "status=200"
+    },
+    {
+      "name": "gate.frontend-127",
+      "status": "PASS",
+      "detail": "status=200"
+    },
+    {
+      "name": "gate.reels-comments-schema",
+      "status": "PASS",
+      "detail": "created=cmvn0torn002kva08ixr82yur listed=1 disabledStatus=403 afterDel=0"
+    }
+  ]
+}

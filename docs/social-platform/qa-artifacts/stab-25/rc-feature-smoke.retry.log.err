@@ -1,0 +1,6 @@
+Error: POST /auth/register -> 429 "Too many requests"
+    at req (file:///C:/xampp/htdocs/%D8%AA%D9%88%D8%A7%D8%B5%D9%84/scripts/rc-feature-smoke.mjs:37:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async register (file:///C:/xampp/htdocs/%D8%AA%D9%88%D8%A7%D8%B5%D9%84/scripts/rc-feature-smoke.mjs:48:16)
+    at async main (file:///C:/xampp/htdocs/%D8%AA%D9%88%D8%A7%D8%B5%D9%84/scripts/rc-feature-smoke.mjs:84:13)
+Assertion failed: !(handle->flags & UV_HANDLE_CLOSING), file src\win\async.c, line 94

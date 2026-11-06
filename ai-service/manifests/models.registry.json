@@ -1,0 +1,117 @@
+{
+  "version": "tawasul-ai-registry-1.0.0",
+  "offlinePolicy": "No external AI API calls. Models must exist under models/ before enablement.",
+  "models": [
+    {
+      "id": "lexicon-1.0.0",
+      "kind": "text-lexicon",
+      "license": "project",
+      "commercialUse": true,
+      "downloadRequired": false,
+      "enabledByDefault": true,
+      "localPath": null,
+      "approxDownloadGb": 0,
+      "approxVramGb": 0,
+      "notes": "Built-in Arabic/English/Iraqi-aware term list. Always available offline."
+    },
+    {
+      "id": "qwen3-4b-q4_k_m",
+      "kind": "text-gguf",
+      "license": "Apache-2.0",
+      "commercialUse": true,
+      "downloadRequired": true,
+      "enabledByDefault": false,
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3-4B-GGUF",
+      "localPath": "text/Qwen3-4B-Q4_K_M.gguf",
+      "approxDownloadGb": 2.5,
+      "approxVramGb": 3.5,
+      "approvalRequired": true,
+      "notes": "Do not download without owner approval. One GPU model at a time on 8GB laptop."
+    },
+    {
+      "id": "paddleocr-arabic-pp-ocrv5",
+      "kind": "ocr",
+      "license": "Apache-2.0",
+      "commercialUse": true,
+      "downloadRequired": true,
+      "enabledByDefault": false,
+      "sourceUrl": "https://github.com/PaddlePaddle/PaddleOCR",
+      "localPath": "ocr/paddle/",
+      "approxDownloadGb": 0.05,
+      "approxVramGb": 0,
+      "approvalRequired": true,
+      "notes": "Broken on this Windows build (oneDNN NotImplementedError). Kept for future Linux/prod."
+    },
+    {
+      "id": "easyocr-ar-en",
+      "kind": "ocr",
+      "license": "Apache-2.0",
+      "commercialUse": true,
+      "downloadRequired": true,
+      "enabledByDefault": false,
+      "sourceUrl": "https://github.com/JaidedAI/EasyOCR",
+      "localPath": "ocr/",
+      "approxDownloadGb": 0.1,
+      "approxVramGb": 0,
+      "approvalRequired": true,
+      "notes": "Active OCR on Windows Dev. Images loaded via PIL→numpy to avoid Unicode path failures in OpenCV."
+    },
+
+    {
+      "id": "faster-whisper-small",
+      "kind": "speech",
+      "license": "MIT",
+      "commercialUse": true,
+      "downloadRequired": true,
+      "enabledByDefault": false,
+      "sourceUrl": "https://huggingface.co/Systran/faster-whisper-small",
+      "localPath": "speech/faster-whisper-small/",
+      "approxDownloadGb": 0.5,
+      "approxVramGb": 2,
+      "approvalRequired": true,
+      "notes": "Do not use private voice messages for recommendations or training."
+    },
+    {
+      "id": "bge-m3",
+      "kind": "embedding",
+      "license": "MIT",
+      "commercialUse": true,
+      "downloadRequired": true,
+      "enabledByDefault": false,
+      "sourceUrl": "https://huggingface.co/BAAI/bge-m3",
+      "localPath": "embeddings/bge-m3/",
+      "approxDownloadGb": 2.2,
+      "approxVramGb": 0,
+      "approvalRequired": true,
+      "notes": "CPU batch embeddings. No pgvector until separately approved."
+    },
+    {
+      "id": "qwen3-vl-4b",
+      "kind": "vision",
+      "license": "verify-card-before-download",
+      "commercialUse": "pending-license-check",
+      "downloadRequired": true,
+      "enabledByDefault": false,
+      "sourceUrl": "https://github.com/QwenLM/Qwen3-VL",
+      "localPath": "vision/",
+      "approxDownloadGb": 3,
+      "approxVramGb": 4,
+      "approvalRequired": true,
+      "notes": "License card must be re-checked before any download. Not installed."
+    },
+    {
+      "id": "falconsai-nsfw-image-detection",
+      "kind": "vision",
+      "license": "Apache-2.0",
+      "commercialUse": true,
+      "downloadRequired": true,
+      "enabledByDefault": true,
+      "sourceUrl": "https://huggingface.co/Falconsai/nsfw_image_detection",
+      "localPath": "nsfw/",
+      "approxDownloadGb": 0.1,
+      "approxVramGb": 0,
+      "approvalRequired": false,
+      "notes": "CPU ViT NSFW/normal classifier for public post/reel/story images. Not face ID. Required for publish quarantine."
+    }
+  ]
+}

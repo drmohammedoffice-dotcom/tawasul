@@ -1,0 +1,5 @@
+node_modules
+dist
+coverage
+frontend/web/node_modules
+frontend/web/dist

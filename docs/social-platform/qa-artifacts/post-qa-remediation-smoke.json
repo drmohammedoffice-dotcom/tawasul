@@ -1,0 +1,80 @@
+{
+  "at": "2026-10-24T22:05:29.348Z",
+  "results": [
+    {
+      "name": "api reachable",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "register",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "otp.provider-status",
+      "status": "PASS",
+      "detail": "mode=mock smsConfigured=false"
+    },
+    {
+      "name": "admin.verification-denied-non-admin",
+      "status": "PASS",
+      "detail": "status=403"
+    },
+    {
+      "name": "admin.verification-list-as-admin",
+      "status": "PASS",
+      "detail": "count=2"
+    },
+    {
+      "name": "verification.concurrent-reg-clash",
+      "status": "PASS",
+      "detail": "status=409"
+    },
+    {
+      "name": "verification.self-review-forbidden",
+      "status": "PASS",
+      "detail": "status=403"
+    },
+    {
+      "name": "verification.admin-approve-cycle",
+      "status": "PASS",
+      "detail": "status=approved docs=1"
+    },
+    {
+      "name": "search.hashtags",
+      "status": "PASS",
+      "detail": "tags=1 tagged=3"
+    },
+    {
+      "name": "archive.restore",
+      "status": "PASS",
+      "detail": "listed=true restored=true"
+    },
+    {
+      "name": "video.trim-status",
+      "status": "PASS",
+      "detail": "available=true"
+    },
+    {
+      "name": "video.trim-reject-over-60",
+      "status": "PASS",
+      "detail": "status=400"
+    },
+    {
+      "name": "explore.ranked-list",
+      "status": "PASS",
+      "detail": "count=3"
+    },
+    {
+      "name": "calls.ice-config",
+      "status": "PASS",
+      "detail": "turnHint=STUN-only mesh. Configure WEBRTC_TURN_* for reliable NAT traversal; SFU needed f"
+    }
+  ],
+  "summary": {
+    "passed": 14,
+    "failed": 0,
+    "skipped": 0
+  }
+}

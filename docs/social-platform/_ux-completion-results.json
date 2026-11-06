@@ -1,0 +1,35 @@
+{
+  "at": "2026-10-24T22:05:32.309Z",
+  "results": [
+    {
+      "name": "ux.comments-list-delete",
+      "status": "PASS",
+      "detail": "list=1 strangerDel=403 after=0"
+    },
+    {
+      "name": "ux.followers-following-privacy",
+      "status": "PASS",
+      "detail": "followers=1 following=1 privateList=403"
+    },
+    {
+      "name": "ux.stories-secure-and-gate",
+      "status": "PASS",
+      "detail": "secureUrl=true strangerView=403"
+    },
+    {
+      "name": "ux.groups-list-members-acl",
+      "status": "PASS",
+      "detail": "listed=1 stranger=403 members=2"
+    },
+    {
+      "name": "ux.channels-list-post-acl",
+      "status": "PASS",
+      "detail": "listed=1 memberPost=403"
+    },
+    {
+      "name": "ux.private-comment-denied",
+      "status": "PASS",
+      "detail": "status=403"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-10-24T21:35:03.826Z",
+  "suites": {
+    "security": {
+      "pass": 7,
+      "fail": 0
+    },
+    "phase1": {
+      "pass": 10,
+      "fail": 0
+    },
+    "phase2": {
+      "pass": 12,
+      "fail": 0
+    },
+    "phase3": {
+      "pass": 13,
+      "fail": 0,
+      "notRun": 4
+    },
+    "ux": {
+      "pass": 6,
+      "fail": 0
+    },
+    "rc": {
+      "pass": 6,
+      "fail": 0,
+      "notRun": 1
+    },
+    "critical": {
+      "pass": 5,
+      "fail": 0
+    },
+    "product": {
+      "pass": 20,
+      "fail": 0
+    },
+    "closedAlpha": {
+      "pass": 11,
+      "fail": 0,
+      "notRun": 1
+    },
+    "integration": {
+      "pass": 16,
+      "fail": 0
+    }
+  },
+  "totals": {
+    "pass": 106,
+    "fail": 0,
+    "notRun": 6
+  }
+}

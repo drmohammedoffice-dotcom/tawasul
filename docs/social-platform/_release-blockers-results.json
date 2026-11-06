@@ -1,0 +1,61 @@
+{
+  "passed": 7,
+  "failed": 0,
+  "notRun": 2,
+  "results": [
+    {
+      "name": "blockers.setup",
+      "ok": true,
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "blockers.reel-comments-crud-acl",
+      "ok": true,
+      "status": "PASS",
+      "detail": "id=cmvn0t3dl000lva08ypbgni1w empty=400 disabled=403 strangerDel=403 after=0"
+    },
+    {
+      "name": "blockers.stream-setup-status",
+      "ok": true,
+      "status": "PASS",
+      "detail": "enabled=true reason=ok webhook=true"
+    },
+    {
+      "name": "blockers.stream-direct-upload-binary",
+      "ok": true,
+      "status": "PASS",
+      "detail": "http=200 mediaId=8458473ea9b24a1689a0588e cfSuccess=undefined"
+    },
+    {
+      "name": "blockers.stream-live-upload-cycle",
+      "ok": true,
+      "status": "PASS",
+      "detail": "mediaId=8458473ea9b24a1689a0588e processingStatus=ready"
+    },
+    {
+      "name": "blockers.otp-provider-status",
+      "ok": true,
+      "status": "PASS",
+      "detail": "mode=mock sms=false productionSafe=false note=Mock OTP only — not real SMS/WhatsApp delivery."
+    },
+    {
+      "name": "blockers.otp-live-send",
+      "ok": null,
+      "status": "NOT RUN",
+      "detail": "BLOCKED — Twilio credentials missing; mock only (no live SMS claimed)"
+    },
+    {
+      "name": "blockers.calls-ice-config",
+      "ok": true,
+      "status": "PASS",
+      "detail": "turnConfigured=false servers=1"
+    },
+    {
+      "name": "blockers.calls-dual-device-media",
+      "ok": null,
+      "status": "NOT RUN",
+      "detail": "BLOCKED — TURN credentials missing (WEBRTC_TURN_URL/URLS + USERNAME + CREDENTIAL); STUN-only"
+    }
+  ]
+}

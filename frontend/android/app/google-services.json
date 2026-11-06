@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1035736395357",
+    "project_id": "scurechat-e62ee",
+    "storage_bucket": "scurechat-e62ee.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1035736395357:android:64bedc4b6e909aecb3e7b4",
+        "android_client_info": {
+          "package_name": "com.securechat.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdOqk-ohWax7TX3K9WsJ7wKs5ckfkOoCc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
