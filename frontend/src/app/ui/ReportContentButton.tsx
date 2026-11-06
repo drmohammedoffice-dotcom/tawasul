@@ -32,11 +32,12 @@ export function ReportContentButton({
     if (!targetId) return;
     setBusy(true);
     try {
+      const trimmed = details.trim();
       await fileContentReport({
         targetType,
         targetId,
         reason,
-        details: details.trim() || undefined
+        ...(trimmed ? { details: trimmed } : {})
       });
       push('تم إرسال البلاغ. شكراً لمساعدتك في حماية المجتمع.', 'success');
       setOpen(false);

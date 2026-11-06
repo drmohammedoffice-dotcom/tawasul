@@ -332,11 +332,13 @@ function PostComposer({ onDone }: { onDone: (id?: string) => void }) {
       setPct(100);
       setPhase('completed');
       setPublishedId(post?.id || null);
+      const moderation = post?.moderation as { badge?: unknown } | undefined;
+      const media = post?.media as Array<{ media?: { mediaRedacted?: boolean } }> | undefined;
       setPendingReview(
         Boolean(
           post?.moderationStatus === 'PENDING_REVIEW' ||
-            post?.moderation?.badge ||
-            post?.media?.[0]?.media?.mediaRedacted
+            moderation?.badge ||
+            media?.[0]?.media?.mediaRedacted
         )
       );
       setStep('done');
