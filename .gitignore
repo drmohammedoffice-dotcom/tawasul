@@ -49,3 +49,6 @@ Thumbs.db
 # keep old generated frontend artifacts out of VCS if present
 frontend/web/node_modules/
 frontend/web/dist/
+
+.vercel
+.vercel/

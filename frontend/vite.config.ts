@@ -74,7 +74,8 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, rootDir, '');
   return {
   root: rootDir,
-  base: './',
+  // Relative base for Capacitor/Electron; absolute on Vercel so deep routes resolve assets.
+  base: process.env.VERCEL ? '/' : './',
   plugins: [
     react(),
     VitePWA({
